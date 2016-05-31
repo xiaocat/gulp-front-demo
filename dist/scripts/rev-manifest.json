@@ -1,0 +1,6 @@
+{
+  "coffee/controls/page_one.js": "coffee/controls/page_one.js?v=b36a2f85ad",
+  "coffee/main.js": "coffee/main.js?v=0fe19cec53",
+  "libs/require.js": "libs/require.js?v=6e3f4af9db",
+  "libs/zepto.js": "libs/zepto.js?v=dca77d264b"
+}

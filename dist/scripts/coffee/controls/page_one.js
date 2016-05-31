@@ -1,0 +1,1 @@
+"use strict";define(["zepto"],function(n){var e;return e={init:function(){return console.log("Ready go!")}}});
