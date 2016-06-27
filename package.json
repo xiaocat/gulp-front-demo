@@ -1,6 +1,8 @@
 {
   "private": true,
   "devDependencies": {
+    "crypto": "0.0.3",
+    "fs": "0.0.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.4.4",
@@ -19,6 +21,10 @@
     "gulp-ruby-sass": "^2.0.6",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
-    "jshint": "^2.9.2"
+    "jshint": "^2.9.2",
+    "path": "^0.12.7",
+    "q": "^1.4.1",
+    "through2": "^2.0.1",
+    "underscore": "^1.8.3"
   }
 }

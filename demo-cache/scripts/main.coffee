@@ -1,19 +1,23 @@
 'use strict'
 
+_cnzz_id = '1258121061'
+
 requirejs.config
-  baseUrl: 'scripts/libs'
+  baseUrl: 'scripts'
   paths:
-    'coffee': '../coffee'
+    'zepto': 'libs/zepto'
+    'require': 'libs/require'
     'jweixin': 'http://res.wx.qq.com/open/js/jweixin-1.0.0'
-    'stat': 'http://s11.cnzz.com/z_stat.php?id=1258121061&web_id=1258121061'
+    'cnzz': "http://s11.cnzz.com/z_stat.php?id=#{_cnzz_id}&web_id=#{_cnzz_id}"
   shim:
     'zepto':
       exports: '$'
     'jweixin':
       exports: 'wx'
-    'stat':
+    'cnzz':
       exports: '_czc'
 
-require ['coffee/controls/' + document.body.dataset.js ], (page)->
+require ['coffee/config', 'coffee/controls/' + document.body.dataset.js ], (Config, page)->
+  console.log Config
   console.log 'page start!!!'
   page.init()

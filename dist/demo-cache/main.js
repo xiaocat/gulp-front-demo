@@ -1,15 +1,12 @@
 'use strict';
-var _cnzz_id;
-
-_cnzz_id = '1258121061';
-
 requirejs.config({
   baseUrl: 'scripts',
   paths: {
     'zepto': 'libs/zepto',
     'require': 'libs/require',
+    'coffee': 'coffee',
     'jweixin': 'http://res.wx.qq.com/open/js/jweixin-1.0.0',
-    'cnzz': "http://s11.cnzz.com/z_stat.php?id=" + _cnzz_id + "&web_id=" + _cnzz_id
+    'stat': 'http://s11.cnzz.com/z_stat.php?id=1258121061&web_id=1258121061'
   },
   shim: {
     'zepto': {
@@ -18,7 +15,7 @@ requirejs.config({
     'jweixin': {
       exports: 'wx'
     },
-    'cnzz': {
+    'stat': {
       exports: '_czc'
     }
   }
