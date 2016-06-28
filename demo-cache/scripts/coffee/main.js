@@ -26,6 +26,5 @@ requirejs.config({
 
 require(['coffee/config', 'coffee/controls/' + document.body.dataset.js], function(Config, page) {
   console.log(Config);
-  console.log('page start!!!');
   return page.init();
 });

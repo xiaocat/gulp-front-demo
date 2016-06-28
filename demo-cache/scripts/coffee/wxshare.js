@@ -1,5 +1,5 @@
 'use strict';
-define(['zepto'], function($, wx) {
+define(['zepto', 'jweixin'], function($, wx) {
   var WxShare;
   return WxShare = (function() {
     function WxShare(title, desc, icon, url) {

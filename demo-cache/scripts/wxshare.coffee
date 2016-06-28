@@ -1,6 +1,6 @@
 'use strict'
 
-define ['zepto'], ($, wx)->
+define ['zepto', 'jweixin'], ($, wx)->
 
   class WxShare
     constructor: (@title, @desc, @icon, @url) ->

@@ -19,5 +19,4 @@ requirejs.config
 
 require ['coffee/config', 'coffee/controls/' + document.body.dataset.js ], (Config, page)->
   console.log Config
-  console.log 'page start!!!'
   page.init()

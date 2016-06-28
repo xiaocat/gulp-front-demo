@@ -85,57 +85,6 @@ define(['zepto'], function($) {
       return userId;
     };
 
-    Native.prototype.alertmess = function(str, time) {
-      var fullH, fullW, html, twidth;
-      if (time == null) {
-        time = 2000;
-      }
-      html = '<div class="mess">' + str + '</div>';
-      fullW = $(window).width();
-      fullH = $(window).height();
-      twidth = parseInt(fullW * 0.8);
-      if ($('.mess').size() < 1) {
-        $('body').append(html);
-        $('.mess').css({
-          'width': twidth,
-          'min-height': '30px',
-          'line-height': '30px',
-          'font-size': '16px',
-          'marginLeft': parseInt(-twidth / 2 - 10),
-          'background': 'rgba(0, 0, 0, .8)',
-          'color': '#fff',
-          'z-index': 99999,
-          'position': 'fixed',
-          'left': '50%',
-          'top': '40%',
-          'border-radius': '5px',
-          'text-align': 'center',
-          'padding': '5px 10px',
-          'box-sizing': 'content-box'
-        }).fadeIn();
-        return setTimeout((function() {
-          return $('.mess').fadeOut(1000, function() {
-            return $('.mess').remove();
-          });
-        }), time);
-      }
-    };
-
-    Native.prototype.shareCallback = function() {
-      return window.share.callback = function(res) {
-        if (this.isAndroid()) {
-          res = window.atob(res);
-        } else {
-          res = window.atob(window.daka.getShareStatus());
-        }
-        return alert(res);
-      };
-    };
-
-    Native.prototype.changeShareTitle = function() {
-      return window.share.title = '测试。。。';
-    };
-
     return Native;
 
   })();
